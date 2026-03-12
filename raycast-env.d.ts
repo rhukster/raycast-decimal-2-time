@@ -14,11 +14,17 @@ declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
   /** Preferences accessible in the `dectime` command */
-  export type Dectime = ExtensionPreferences & {}
+  export type Dectime = ExtensionPreferences & {
+  /** Auto Copy - Instantly copy the result to clipboard instead of showing a list */
+  "autoCopy": boolean
+}
 }
 
 declare namespace Arguments {
   /** Arguments passed to the `dectime` command */
-  export type Dectime = {}
+  export type Dectime = {
+  /** 3.4322 or 01:30:00 */
+  "value": string
+}
 }
 
